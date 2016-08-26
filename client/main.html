@@ -1,0 +1,67 @@
+<head>
+  <title>textcircle</title>
+  <meta name=index content="algo">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <!--- template que viene con el paquete accounts-->
+      <a class="navbar-brand" href="#">Text Circle</a>
+      <a class="navbar-text navbar-right" href="#"> {{> loginButtons align="right" }}</a>
+    
+    
+    </div>
+  </nav>
+
+ <!--- {{> date_display}} -->
+
+<div class="container top-margin">
+  <h1>Welcome to Textcircle!</h1>
+
+  <div class="row">
+    <div class="col-md-6">
+      {{> editor}}
+      
+    </div>
+
+    <div class="col-md-6">
+      {{> viewer }}
+      
+    </div>
+      
+  </div>
+
+  
+  
+
+</div>
+
+</body>
+
+<template name="editor">
+  <!--- {{> sharejsAce docid=document onRender=config onConnect=setMode id="editor"}} -->
+  
+  {{> sharejsCM docid=docid onRender=config id="editor"}}
+
+  fsdfsd
+
+</template>
+
+<template name="viewer">
+  <!--- {{> sharejsAce docid=document onRender=config onConnect=setMode id="editor"}} -->
+  
+ muestra algo en el viewer
+ <iframe id="viewer_iframe">
+   
+ </iframe>
+
+</template>
+
+
+  <!---
+<template name="date_display">
+  {{current_date}}<p> mi valor scopeado: {{myVar}}  </p>
+</template>
+-->
